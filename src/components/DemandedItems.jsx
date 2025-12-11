@@ -12,7 +12,7 @@ const DemandedItems = () => {
       />
 
       <div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-10 mt-6" >
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-10 mt-6" >
         {DEMANDEDITEMS.map((item, index) => (
           <div
             key={index}
@@ -34,7 +34,7 @@ const DemandedItems = () => {
             <img src={assets.likeiconn} alt="like" className="w-[22px] absolute top-3 right-3 cursor-pointer" />
 
             {/* Product Image */}
-            <div className="w-full h-[240px] md:h-[260px] flex items-center justify-center">
+            <div className="w-full h-[160px] md:h-[260px] flex items-center justify-center">
               <img src={item.image} alt="" className="w-full h-full object-contain"/>
             </div>
 

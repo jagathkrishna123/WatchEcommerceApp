@@ -39,7 +39,7 @@
 //       <nav className="w-full bg-[#035E52] text-white py-1 shadow-md relative">
 //         <div className="max-w-[1440px] mx-auto flex items-center justify-between gap-6 px-4 bg-amber-600">
 //           {/* Logo */}
-          
+
 //           <div className=" flex items-center">
 //             <img
 //               src={assets.logo}
@@ -108,24 +108,17 @@ import { Search, Phone, Mail, Bell, User, Heart, ShoppingCart, Store, Menu, X } 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const menuItems = [
-    "OFFERS",
-    "LUXURY",
-    "LATEST",
-    "SMART WATCHES",
-    "SPORTS",
-    "CLASSIC",
-  ];
+  const menuItems = ["OFFERS", "LUXURY", "LATEST", "SMART WATCHES", "SPORTS", "CLASSIC"];
 
   return (
     <>
       <header className="w-full">
         {/* ----------- TOP BAR ----------- */}
-        <div className="w-full bg-[#00423D] h-[75px] md:h-auto text-white text-sm font-dmsans text-[14px]">
-          <div className="max-w-[1440px] mx-auto flex justify-between items-center py-2 px-4">
+        <div className="w-full bg-[#00423D] h-[75px] md:h-auto flex items-end text-white text-sm font-dmsans text-[14px]">
+          <div className="max-w-[1440px] mx-auto flex justify-between items-center py-2 px-4 w-full">
             {/* Left */}
-            <div className="flex items-center gap-6 justify-between">
-              <img src={Logo} alt="" className="w-[60px] -top-2 md:hidden"/>
+            <div className="flex items-center gap-1 justify-between">
+              <img src={Logo} alt="" className="w-[60px] -top-2 md:hidden" />
               <span className="flex items-center gap-2 text-[11px] md:text-[14px]">
                 <Phone className="w-4 h-4" />
                 1800 257 8600
@@ -144,10 +137,7 @@ const Navbar = () => {
         <nav className="w-full bg-[#005C53] text-white shadow-md relative hidden md:block ">
           <div className="max-w-[1440px] mx-auto flex items-center justify-between gap-6 px-4 py-2 relative">
             {/* Menu Button (Mobile) */}
-            <button
-              onClick={() => setIsSidebarOpen(true)}
-              className="lg:hidden text-white p-2"
-            >
+            <button onClick={() => setIsSidebarOpen(true)} className="lg:hidden text-white p-2">
               <Menu className="w-6 h-6" />
             </button>
 
@@ -164,17 +154,13 @@ const Navbar = () => {
               </div>
             </div> */}
             <div>
-              <img src={Logo} alt="" className="absolute w-[160px] -top-2"/>
+              <img src={Logo} alt="" className="absolute w-[160px] -top-2" />
             </div>
 
             {/* Search Box */}
             <div className="hidden md:flex items-center flex-1 max-w-[800px] bg-white rounded-md px-3 py-2.5 mx-4">
-              <Search className="text-gray-500 w-5 h-5 mr-2"/>
-              <input
-                type="text"
-                placeholder="Search Hereeeeeeeeeeeee"
-                className="w-full outline-none text-gray-700 text-sm placeholder:text-gray-400"
-              />
+              <Search className="text-gray-500 w-5 h-5 mr-2" />
+              <input type="text" placeholder="Search Hereeeeeeeeeeeee" className="w-full outline-none text-gray-700 text-sm placeholder:text-gray-400" />
             </div>
 
             {/* Right Icons */}
@@ -203,12 +189,7 @@ const Navbar = () => {
             <div className="max-w-[1440px] mx-auto px-4">
               <ul className="flex items-center justify-center gap-8 tracking-wide uppercase py-1">
                 {menuItems.map((item, index) => (
-                  <li
-                    key={item}
-                    className={`cursor-pointer text-sm hover:opacity-80 transition font-dmsans pb-1 ${
-                      index === 0 ? "border-b-2 border-white" : ""
-                    }`}
-                  >
+                  <li key={item} className={`cursor-pointer text-sm hover:opacity-80 transition font-dmsans pb-1 ${index === 0 ? "border-b-2 border-white" : ""}`}>
                     {item}
                   </li>
                 ))}
@@ -231,18 +212,8 @@ const Navbar = () => {
       </header>
 
       {/* ----------- SIDEBAR ----------- */}
-      <div
-        className={`fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity duration-300 ${
-          isSidebarOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
-        onClick={() => setIsSidebarOpen(false)}
-      >
-        <div
-          className={`fixed left-0 top-0 h-full w-[280px] bg-white shadow-xl transform transition-transform duration-300 ${
-            isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
-          onClick={(e) => e.stopPropagation()}
-        >
+      <div className={`fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity duration-300 ${isSidebarOpen ? "opacity-100 visible" : "opacity-0 invisible"}`} onClick={() => setIsSidebarOpen(false)}>
+        <div className={`fixed left-0 top-0 h-full w-[280px] bg-white shadow-xl transform transition-transform duration-300 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`} onClick={(e) => e.stopPropagation()}>
           {/* Sidebar Header */}
           <div className="flex items-center justify-between p-4 bg-[#035E52] text-white">
             <div className="flex flex-col items-start">
@@ -250,14 +221,9 @@ const Navbar = () => {
                 <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[16px] border-b-[#C9A961]"></div>
                 <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[16px] border-b-[#8B7355]"></div>
               </div>
-              <span className="text-[#C9A961] font-semibold text-lg tracking-wider mt-1">
-                AL NIBRAS
-              </span>
+              <span className="text-[#C9A961] font-semibold text-lg tracking-wider mt-1">AL NIBRAS</span>
             </div>
-            <button
-              onClick={() => setIsSidebarOpen(false)}
-              className="p-2 hover:bg-[#047368] rounded transition"
-            >
+            <button onClick={() => setIsSidebarOpen(false)} className="p-2 hover:bg-[#047368] rounded transition">
               <X className="w-6 h-6" />
             </button>
           </div>
@@ -267,12 +233,7 @@ const Navbar = () => {
             <ul className="space-y-1">
               {menuItems.map((item, index) => (
                 <li key={item}>
-                  <a
-                    href="#"
-                    className={`block px-4 py-3 rounded-md text-gray-700 hover:bg-[#035E52] hover:text-white transition ${
-                      index === 0 ? "bg-[#035E52] text-white" : ""
-                    }`}
-                  >
+                  <a href="#" className={`block px-4 py-3 rounded-md text-gray-700 hover:bg-[#035E52] hover:text-white transition ${index === 0 ? "bg-[#035E52] text-white" : ""}`}>
                     {item}
                   </a>
                 </li>
@@ -280,24 +241,15 @@ const Navbar = () => {
             </ul>
 
             <div className="mt-6 pt-6 border-t border-gray-200 space-y-3">
-              <a
-                href="#"
-                className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:text-[#035E52] transition"
-              >
+              <a href="#" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:text-[#035E52] transition">
                 <User className="w-5 h-5" />
                 <span>My Account</span>
               </a>
-              <a
-                href="#"
-                className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:text-[#035E52] transition"
-              >
+              <a href="#" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:text-[#035E52] transition">
                 <Heart className="w-5 h-5" />
                 <span>Wishlist</span>
               </a>
-              <a
-                href="#"
-                className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:text-[#035E52] transition"
-              >
+              <a href="#" className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:text-[#035E52] transition">
                 <Store className="w-5 h-5" />
                 <span>Our Stores</span>
               </a>

@@ -5,6 +5,8 @@ import TrendingWatches from './components/TrendingWatches'
 import Brands from './components/Brands'
 import DemandedItems from './components/DemandedItems'
 import Banner from './components/Banner'
+import DownloadAppBanner from './components/DownloadAppBanner'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
       <Brands/>
       <DemandedItems/>
       <Banner/>
+      <DownloadAppBanner/>
+      <Footer/>
       </div>
     </div>
   )
