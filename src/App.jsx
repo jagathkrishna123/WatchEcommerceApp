@@ -7,6 +7,7 @@ import DemandedItems from './components/DemandedItems'
 import Banner from './components/Banner'
 import DownloadAppBanner from './components/DownloadAppBanner'
 import Footer from './components/Footer'
+import RecentSearch from './components/RecentSerch'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Brands/>
       <DemandedItems/>
       <Banner/>
+      <RecentSearch/>
       <DownloadAppBanner/>
       <Footer/>
       </div>

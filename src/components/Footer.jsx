@@ -1,32 +1,15 @@
-// import React from 'react'
-// import { assets } from '../constants/assets'
 
-// const Footer = () => {
-//   return (
-//     <div className='w-full h-[364px] bg-[#A3C4C1] mt-10'>
-//         <img src={assets.logo} alt="" />
-
-//     </div>
-//   )
-// }
-
-// export default Footer
 
 import React from "react";
 import { assets } from "../constants/assets";
-import { Instagram, Youtube, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
     <div className="w-full bg-[#A3C4C1] mt-10 py-12 px-6 md:px-20">
-      {/* TOP SECTION */}
       <div className="flex flex-col md:flex-row justify-between gap-10 font-dmsans text-[#003F38]">
-        {/* Logo */}
         <div>
-          <img src={assets.logo} alt="logo" className="h-14 object-contain" />
+          <img src={assets.logo} alt="logo" className="w-[120px] md:w-full object-contain" />
         </div>
-
-        {/* Company */}
         <div>
           <h3 className="font-medium  text-[17px]">Company</h3>
           <ul className="mt-3 space-y-2">
@@ -34,8 +17,6 @@ const Footer = () => {
             <li>About</li>
           </ul>
         </div>
-
-        {/* Legal */}
         <div>
           <h3 className="font-medium text-[17px]">Legal</h3>
           <ul className="mt-3 space-y-2">
@@ -43,8 +24,6 @@ const Footer = () => {
             <li>Terms & Conditions</li>
           </ul>
         </div>
-
-        {/* Social */}
         <div>
           <h3 className="font-medium text-[17px]">Link Up with Friends!</h3>
           <ul className="mt-3 space-y-2">
@@ -59,17 +38,15 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-
-        {/* Right section */}
         <div className="flex flex-col gap-4">
           <h3 className="font-medium font-dmsans text-[17px]">Questions? Comments? Concerns?</h3>
-          <div className="flex justify-end">
+          <div className="flex justify-start md:justify-end">
             <button className="bg-[#0C483F] text-white px-2 py-2 rounded-md w-[100px]">Help</button>
           </div>
         </div>
       </div>
 
-      {/* COPYRIGHT */}
+      {/* copyright text........ */}
       <p className="text-center mt-10 text-[#003F38] font-dmsans text-[16px]">© 2025 Gold E Commerce All rights reserved.</p>
     </div>
   );

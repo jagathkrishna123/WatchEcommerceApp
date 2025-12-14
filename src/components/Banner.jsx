@@ -4,12 +4,8 @@ import banner from "../assets/banner.svg";
 const Banner = () => {
   return (
     <div className="w-full flex justify-center ">
-      {/* Max width wrapper */}
       <div className="relative w-full max-w-7xl px-4">
-        {/* Banner Image */}
         <img src={banner} alt="banner" className="w-full h-auto object-cover rounded-[8px]" />
-
-        {/* Text on top */}
         <div className="absolute inset-0 flex flex-row items-center  text-white justify-end px-18">
           <div className="max-w-xl w-full text-right md:text-left">
             {" "}

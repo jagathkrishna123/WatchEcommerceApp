@@ -57,6 +57,7 @@ import blob3 from "../assets/blob3.svg"
 import simicon from '../assets/simicon.svg'
 import waveicon from '../assets/waveicon.svg'
 import chargelevel from '../assets/chargelevel.svg'
+import Hamburger from '../assets/Hamburger.svg'
 
 
 export const assets = {
@@ -93,9 +94,44 @@ export const assets = {
     waveicon,
     simicon,
     chargelevel,
-    
-
+    Hamburger,
 }
+
+export const NAV_ACTIONS = [
+  {
+    id: 1,
+    image: bellicon,
+    alt: "Notifications",
+    wrapperClass: "hidden lg:block",
+  },
+  {
+    id: 2,
+    image: profileicon,
+    alt: "Profile",
+    wrapperClass: "hidden lg:block",
+  },
+  {
+    id: 3,
+    image: likeicon,
+    alt: "Wishlist",
+    wrapperClass: "hidden sm:block",
+  },
+  {
+    id: 4,
+    image: carticon,
+    alt: "Cart",
+    wrapperClass: "",
+    relative: true,
+  },
+  {
+    id: 5,
+    image: storeicon,
+    alt: "Our Stores",
+    wrapperClass: "hidden lg:flex items-center gap-2",
+    label: "Our Stores",
+  },
+];
+
 
 export const CUSTOMERSUPPORTDATA = [
     {image:shippingicon, title: "Free shiping", subtitle: "On order over ₹2000"},
@@ -114,14 +150,14 @@ export const TRENDING_PRODUCTS = [
       "All-day Health Management",
       "5-Day Battery Life"
     ],
-    bgShape: blob1, // for left card
+    bgShape: blob1,
   },
 
   {
     id: 2,
     title: "HUAWEI Watch 3 Pro",
     image: watch2,
-    bgShape: blob2, // only background shape, no features
+    bgShape: blob2,
   },
 
   {
@@ -260,4 +296,43 @@ export const WATCHFEATURES2 = [
     title: "Applications",
     width: "w-[160px]"
   }
+]
+
+export const RECENTSEARCHS = [
+ {
+    image: product10,
+    productName:"IWA Sport watch",
+    brand:"Brand : Titan",
+    price:"AED 27000"
+  },
+ {
+    image: product11,
+    productName:"IWA Sport watch",
+    brand:"Brand : Titan",
+    price:"AED 27000"
+  },
+ {
+    image: product12,
+    productName:"IWA Sport watch",
+    brand:"Brand : Titan",
+    price:"AED 27000"
+  },
+ {
+    image: product13,
+    productName:"IWA Sport watch",
+    brand:"Brand : Titan",
+    price:"AED 27000"
+  },
+  {
+    image: product4,
+    productName:"IWA Sport watch",
+    brand:"Brand : Titan",
+    price:"AED 27000"
+  },
+  {
+    image: product5,
+    productName:"IWA Sport watch",
+    brand:"Brand : Titan",
+    price:"AED 27000"
+  },
 ]
