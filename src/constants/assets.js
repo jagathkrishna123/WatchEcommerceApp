@@ -132,6 +132,14 @@ export const NAV_ACTIONS = [
   },
 ];
 
+export const SIDEBARLINKS = [
+  { label: "Home", path: "/" },
+  { label: "Watches", path: "/watches" },
+  { label: "Collections", path: "/collections" },
+  { label: "About Us", path: "/about" },
+  { label: "Contact", path: "/contact" },
+];
+
 
 export const CUSTOMERSUPPORTDATA = [
     {image:shippingicon, title: "Free shiping", subtitle: "On order over ₹2000"},

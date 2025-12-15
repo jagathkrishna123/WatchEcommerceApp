@@ -1,16 +1,30 @@
 import React, { useState } from "react";
 import Heroimg from "../assets/heroimg.png";
 import Bannerimg from "../assets/mainbanner.svg";
-import { assets, CUSTOMERSUPPORTDATA } from "../constants/assets";
+import { assets, CUSTOMERSUPPORTDATA, SIDEBARLINKS } from "../constants/assets";
 import { X } from "lucide-react";
+import { NavLink } from "react-router-dom";
+
 
 const Hero = () => {
   const [openSidebar, setOpenSidebar] = useState(false);
 
   return (
+    // <div
+    //   className="w-full min-h-screen bg-cover bg-center py-2 md:py-12 flex flex-col relative overflow-hidden"
+    //   style={{ backgroundImage: `url(${Heroimg})` }}>
     <div
-      className="w-full min-h-screen bg-cover bg-center py-2 md:py-12 flex flex-col relative overflow-hidden"
-      style={{ backgroundImage: `url(${Heroimg})` }}>
+  className="
+    w-full
+    min-h-[75svh] min-sm:min-h-[95vh] md:min-h-screen
+    bg-cover bg-center
+    py-2 md:py-12
+    flex flex-col
+    relative
+    overflow-hidden
+  "
+  style={{ backgroundImage: `url(${Heroimg})` }}
+>
       <div className="absolute inset-0 bg-black/20 z-0"></div>
 
       {/* hamburger icon */}
@@ -37,23 +51,21 @@ const Hero = () => {
         </div>
 
         {/* Sidebar Content */}
-        <nav className="flex flex-col gap-6 px-6 mt-6 text-white font-dmsans">
-          <a href="#" className="text-lg hover:text-[#00D1B2] transition">
-            Home
-          </a>
-          <a href="#" className="text-lg hover:text-[#00D1B2] transition">
-            Watches
-          </a>
-          <a href="#" className="text-lg hover:text-[#00D1B2] transition">
-            Collections
-          </a>
-          <a href="#" className="text-lg hover:text-[#00D1B2] transition">
-            About Us
-          </a>
-          <a href="#" className="text-lg hover:text-[#00D1B2] transition">
-            Contact
-          </a>
-        </nav>
+        <nav className="flex flex-col gap-6 px-6 mt-6 font-dmsans">
+  {SIDEBARLINKS.map((link) => (
+    <NavLink
+      key={link.path}
+      to={link.path}
+      className={({ isActive }) =>
+        `text-lg transition ${
+          isActive ? "text-[#00D1B2]" : "text-white hover:text-[#00D1B2]"
+        }`
+      }
+    >
+      {link.label}
+    </NavLink>
+  ))}
+</nav>
       </div>
 
       {/* ---------------- HERO TEXT ---------------- */}
