@@ -6,7 +6,7 @@ import { assets } from "../constants/assets";
 const Footer = () => {
   return (
     <div className="w-full bg-[#A3C4C1] mt-10 py-12 px-6 md:px-20">
-      <div className="flex flex-col md:flex-row justify-between gap-10 font-dmsans text-[#003F38]">
+      <div className="flex flex-col max-w-7xl w-full mx-auto md:flex-row justify-between gap-10 font-dmsans text-[#003F38]">
         <div>
           <img src={assets.logo} alt="logo" className="w-[120px] md:w-full object-contain" />
         </div>

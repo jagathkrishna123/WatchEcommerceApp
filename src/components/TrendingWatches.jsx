@@ -6,7 +6,7 @@ import { assets, watchFeatures, WATCHFEATURES2 } from "../constants/assets";
 
 const TrendingWatches = () => {
   return (
-    <div className="flex flex-col min-h-screen max-w-7xl mx-auto pt-10 px-4 sm:px-6 lg:px-0">
+    <div className="flex flex-col h-full max-w-7xl mx-auto pt-10 px-4 sm:px-6 lg:px-0">
       <Title title="Shop on Trend" subTitle="We have every style at your affordable budget" align="left" />
 
       <div className="bg-white rounded-xl max-w-[1296px] min-h-[524px] mx-auto w-full mt-10 flex flex-col lg:flex-row gap-8 p-10 items-center justify-center">
@@ -14,7 +14,7 @@ const TrendingWatches = () => {
         <div className="w-[344px] h-[428px] bg-white rounded-[21px] shadow-xl p-4 relative">
           <img src={assets.blob1} alt="" className="absolute top-0 left-0 w-[100%] opacity-100 pointer-events-none select-none rounded-[21px]" />
           <p className="font-dmsans relative z-[2] text-center font-medium text-[18px]">HUAWEI Watch 3 Pror</p>
-          <img src={assets.watch1} alt="" className="relative z-[20] mx-auto mt-4" />
+          <img src={assets.watch1} alt="" className="relative z-[20] mx-auto mt-4 transition-transform duration-500 ease-out hover:scale-110" />
           {watchFeatures.map((item) => {
             const Icon = item.icon;
             return (
@@ -34,7 +34,7 @@ const TrendingWatches = () => {
           <p className="font-dmsans relative z-[2] text-center font-medium text-[20px]">HUAWEI Watch 3 Pro</p>
 
           {/* <img src={assets.watch2} alt="" className="absolute left-1/2 top-[60%] -translate-x-1/2 -translate-y-1/2 z-[20]" /> */}
-          <img src={assets.watch2} alt="" className="absolute left-[52%] top-[60%] -translate-x-1/2 -translate-y-1/2 z-[20]" />
+          <img src={assets.watch2} alt="" className="absolute left-[52%] top-[60%] -translate-x-1/2 -translate-y-1/2 z-[20] transition-transform duration-500 ease-out hover:scale-110" />
         </div>
 
         {/* Card 3 */}
@@ -80,10 +80,16 @@ const TrendingWatches = () => {
 
     {/* WATCH — PERFECTLY CENTERED */}
     <img
-      src={assets.watch3}
-      alt=""
-      className="absolute right-0 top-1/2 -translate-y-1/2 w-[250px] object-contain z-30 pointer-events-none"
-    />
+  src={assets.watch3}
+  alt=""
+  className="
+    absolute right-0 top-1/2 -translate-y-1/2
+    w-[250px] object-contain z-30
+    transition-transform duration-500 ease-out
+    hover:scale-110
+  "
+/>
+
 
   </div>
 </div>

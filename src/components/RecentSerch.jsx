@@ -18,19 +18,19 @@ const RecentSearch = () => {
   return (
     <div className="flex flex-col max-w-7xl mx-auto w-full px-4 pt-6 pb-10 mb-10">
       <Title title="Recent Searched" subTitle="234 New item added" align="left" />
-      <div className="flex gap-5 overflow-x-auto scrollbar-hide pt-6 pb-4">
+      <div className="flex gap-5 overflow-x-auto scrollbar-hide pt-6 pb-4 scroll-smooth">
         {RECENTSEARCHS.map((item, index) => (
           <div key={index}  className=" min-w-[230px] md:min-w-[260px] relative flex flex-col items-center bg-white  rounded-2xl  border border-[#A3C4C1]  p-4 md:p-3  shadow-xl hover:shadow-lg transition">
             <img
               src={liked[index] ? likedicon : assets.likeiconn}
               alt="like"
-              className="w-[22px] absolute top-3 right-3 cursor-pointer"
+              className="w-[22px] absolute top-3 right-3 cursor-pointer z-10"
               onClick={() => handleLike(index)}
             />
 
             {/* PRODUCT IMAGE */}
             <div className="w-full h-[160px] md:h-[260px] flex items-center justify-center">
-              <img src={item.image} alt="" className="w-full h-full object-contain" />
+              <img src={item.image} alt="" className="w-full h-full object-contain transition-transform duration-500 ease-out hover:scale-105" />
             </div>
 
             {/* DETAILS */}
