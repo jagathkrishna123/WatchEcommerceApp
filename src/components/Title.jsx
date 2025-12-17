@@ -18,5 +18,3 @@ const Title = ({ title, subTitle, align }) => {
 };
 
 export default Title;
-
-//   <Title title="What Our Customer Says" subTitle="Discover why disxerning travelers choose stayVenture for their luxury accomodations around the world"/>

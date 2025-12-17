@@ -1,8 +1,6 @@
-
-
 import React from "react";
 import Logo from "../assets/logo.svg";
-import { Search, Phone, Mail} from "lucide-react";
+import { Search, Phone, Mail } from "lucide-react";
 import { NAV_ACTIONS } from "../constants/assets";
 
 const Navbar = () => {
@@ -12,35 +10,26 @@ const Navbar = () => {
     <>
       <header className="w-full">
         {/* ----------- TOP BAR ----------- */}
-       <div className="w-full bg-[#00423D] h-[75px] md:h-auto flex items-end text-white font-dmsans text-[14px]">
-  <div className="max-w-[1440px] mx-auto flex justify-start md:justify-between items-center py-2 px-4 w-full">
-    
-    {/* Left */}
-    <div className="flex items-center gap-3">
-      <img
-        src={Logo}
-        alt=""
-        className="w-[52px] md:w-[60px] md:hidden"
-      />
+        <div className="w-full bg-[#00423D] h-[75px] md:h-auto flex items-end text-white font-dmsans text-[14px]">
+          <div className="max-w-[1440px] mx-auto flex justify-start md:justify-between items-center py-2 px-4 w-full">
+            {/* Left................ */}
+            <div className="flex items-center gap-3">
+              <img src={Logo} alt="" className="w-[52px] md:w-[60px] md:hidden" />
+              <span className="flex items-center gap-2 text-[10px] md:text-[14px]">
+                <Phone className="w-3 h-3 md:w-4 md:h-4" />
+                1800 257 8600
+              </span>
 
-      <span className="flex items-center gap-2 text-[10px] md:text-[14px]">
-        <Phone className="w-3 h-3 md:w-4 md:h-4" />
-        1800 257 8600
-      </span>
+              <span className="flex items-center gap-2 text-[10px] md:text-[14px]">
+                <Mail className="w-3 h-3 md:w-4 md:h-4" />
+                info@goldDiamonds.com
+              </span>
+            </div>
 
-      <span className="flex items-center gap-2 text-[10px] md:text-[14px]">
-        <Mail className="w-3 h-3 md:w-4 md:h-4" />
-        info@goldDiamonds.com
-      </span>
-    </div>
-
-    {/* Right */}
-    <span className="hidden md:block">
-      IST (Mon - Sat) 10:00 AM to 6:00 PM
-    </span>
-  </div>
-</div>
-
+            {/* Right........... */}
+            <span className="hidden md:block">IST (Mon - Sat) 10:00 AM to 6:00 PM</span>
+          </div>
+        </div>
 
         {/* ----------- MAIN NAVBAR ----------- */}
         <nav className="w-full bg-[#005C53] text-white shadow-md relative hidden md:block ">
@@ -48,7 +37,7 @@ const Navbar = () => {
             <div className="w-[140px] relative">
               <img src={Logo} className="absolute -top-8" />
             </div>
-            {/* Search...................*/}
+            {/* Search....bar...............*/}
             <div className="hidden md:flex items-center flex-1 max-w-[800px] bg-white rounded-md px-3 py-2.5 mx-4 ml-3">
               <Search className="text-gray-500 w-5 h-5 mr-2" />
               <input type="text" placeholder="Search Here" className="w-full outline-none text-gray-700 text-sm placeholder:text-gray-400" />

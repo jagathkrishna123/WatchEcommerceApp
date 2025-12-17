@@ -8,7 +8,6 @@ import Title from "./Title";
 
 const RecentSearch = () => {
   const [liked, setLiked] = useState(Array(RECENTSEARCHS.length).fill(false));
-
   const handleLike = (index) => {
     const newLiked = [...liked];
     newLiked[index] = !newLiked[index];
@@ -21,19 +20,15 @@ const RecentSearch = () => {
       <div className="flex gap-5 overflow-x-auto scrollbar-hide pt-6 pb-4 scroll-smooth">
         {RECENTSEARCHS.map((item, index) => (
           <div key={index}  className=" min-w-[230px] md:min-w-[260px] relative flex flex-col items-center bg-white  rounded-2xl  border border-[#A3C4C1]  p-4 md:p-3  shadow-xl hover:shadow-lg transition">
-            <img
-              src={liked[index] ? likedicon : assets.likeiconn}
-              alt="like"
-              className="w-[22px] absolute top-3 right-3 cursor-pointer z-10"
-              onClick={() => handleLike(index)}
-            />
+            <img src={liked[index] ? likedicon : assets.likeiconn} alt="like"className="w-[22px] absolute top-3 right-3 cursor-pointer z-10"
+              onClick={() => handleLike(index)}/>
 
-            {/* PRODUCT IMAGE */}
+            {/* image................ */}
             <div className="w-full h-[160px] md:h-[260px] flex items-center justify-center">
               <img src={item.image} alt="" className="w-full h-full object-contain transition-transform duration-500 ease-out hover:scale-105" />
             </div>
 
-            {/* DETAILS */}
+            {/* info............ */}
             <p className="font-medium text-[14px] md:text-[16px] font-dmsans text-[#010F17] mt-3 text-center">
               {item.productName}
             </p>
