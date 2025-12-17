@@ -19,7 +19,7 @@ const RecentSearch = () => {
       <Title title="Recent Searched" subTitle="234 New item added" align="left" />
       <div className="flex gap-5 overflow-x-auto scrollbar-hide pt-6 pb-4 scroll-smooth">
         {RECENTSEARCHS.map((item, index) => (
-          <div key={index}  className=" min-w-[230px] md:min-w-[260px] relative flex flex-col items-center bg-white  rounded-2xl  border border-[#A3C4C1]  p-4 md:p-3  shadow-xl hover:shadow-lg transition">
+          <div key={index}  className=" min-w-[230px] md:min-w-[260px] relative flex flex-col items-center bg-white  rounded-2xl  border border-[#A3C4C1]  p-4 md:p-3  shadow-lg hover:shadow-lg transition">
             <img src={liked[index] ? likedicon : assets.likeiconn} alt="like"className="w-[22px] absolute top-3 right-3 cursor-pointer z-10"
               onClick={() => handleLike(index)}/>
 
