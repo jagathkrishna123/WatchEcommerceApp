@@ -64,11 +64,7 @@ const Hero = () => {
         <div className="grid grid-cols-2 max-w-4xl mx-auto md:grid-cols-4 gap-x-6 gap-y-6 justify-items-center w-full px-3 md:px-0">
           {CUSTOMERSUPPORTDATA.map((item, index) => (
             <motion.div
-              initial={{x: index < 2 ? -30 : 30,opacity: 0,}}
-              whileInView={{x: 0,opacity: 1,}}
-              transition={{duration: 0.6,delay: index * 0.15,ease: "easeOut",}}
-              viewport={{ once: true }}
-              key={index}
+              initial={{opacity: 0,scale: 0.85}} whileInView={{opacity: 1,scale: 1}} transition={{duration: 0.6,delay: index * 0.15,ease: "easeOut"}} viewport={{ once: true }}key={index}
               className="flex flex-col items-center text-center p-2 md:p-4 rounded-xl" >
 
               <div className="bg-[#005C53] w-[32px] h-[32px] md:w-16 md:h-16 flex items-center justify-center rounded-full mb-1 md:mb-2">

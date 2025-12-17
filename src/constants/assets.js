@@ -343,4 +343,16 @@ export const RECENTSEARCHS = [
     brand:"Brand : Titan",
     price:"AED 27000"
   },
+  {
+    image: product12,
+    productName:"IWA Sport watch",
+    brand:"Brand : Titan",
+    price:"AED 27000"
+  },
+  {
+    image: product2,
+    productName:"IWA Sport watch",
+    brand:"Brand : Titan",
+    price:"AED 27000"
+  },
 ]

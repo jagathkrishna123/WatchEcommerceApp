@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className="w-full bg-[#00423D] h-[75px] md:h-auto flex items-end text-white font-dmsans text-[14px]">
           <div className="max-w-[1440px] mx-auto flex justify-start md:justify-between items-center py-2 px-4 w-full">
             {/* Left................ */}
-            <div className="flex items-center gap-1 justify-between w-full">
+            <div className="flex items-center gap-2 justify-between md:justify-normal w-full md:w-auto">
               <img src={Logo} alt="" className="w-[54px] md:w-[60px] md:hidden" />
               <span className="flex items-center gap-2 text-[12px] md:text-[14px]">
                 <Phone className="w-3 h-3 md:w-4 md:h-4" />
@@ -27,8 +27,9 @@ const Navbar = () => {
             </div>
 
             {/* Right........... */}
-            <span className="hidden md:block">IST (Mon - Sat) 10:00 AM to 6:00 PM</span>
-          </div>
+<span className="hidden md:block whitespace-nowrap">
+      IST (Mon - Sat) 10:00 AM to 6:00 PM
+    </span>          </div>
         </div>
 
         {/* ----------- MAIN NAVBAR ----------- */}

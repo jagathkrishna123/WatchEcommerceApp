@@ -8,8 +8,11 @@ const DemandedItems = () => {
   const [liked, setLiked] = useState({});
 
   const handleLike = (index) => {
-    setLiked((prev) => ({...prev,[index]: true,}));
-  };
+  setLiked((prev) => ({
+    ...prev,
+    [index]: !prev[index],
+  }));
+};
 
   return (
     <div className="flex flex-col max-w-7xl w-full mx-auto px-4 pt-6 pb-10 mb-10">
