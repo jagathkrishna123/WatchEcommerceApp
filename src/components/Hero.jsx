@@ -46,7 +46,7 @@ const Hero = () => {
             Explor the next generation of watch shopping with our cutting-edge e-commerce platform, featuring extraordinary craftsmanship and one-of-a-kind styles.
           </motion.p>
 
-          <p className="md:hidden text-[14px] font-dmsans font-light max-w-md text-[#F1F1F1]">Discover the future of watch shopping with our innovative e-commerce platform, showcasing unique styles and exceptional craftsmanship.</p>
+          <motion.p initial={{ y: -30, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }} className="md:hidden text-[14px] font-dmsans font-light max-w-md text-[#F1F1F1]">Discover the future of watch shopping with our innovative e-commerce platform, showcasing unique styles and exceptional craftsmanship.</motion.p>
         </div>
       </div>
 
