@@ -33,3 +33,9 @@ html, body {
 html {
   scroll-behavior: smooth;
 }
+li {
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}

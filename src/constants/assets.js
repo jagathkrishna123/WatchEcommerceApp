@@ -60,6 +60,9 @@ import chargelevel from '../assets/chargelevel.svg'
 import Hamburger from '../assets/Hamburger.svg'
 
 
+ export const MENUITEMS = ["OFFERS", "LUXURY", "LATEST", "SMART WATCHES", "SPORTS", "CLASSIC"];
+
+
 export const assets = {
     heroimg,
     mainbanner,
@@ -133,11 +136,11 @@ export const NAV_ACTIONS = [
 ];
 
 export const SIDEBARLINKS = [
-  { label: "Home", path: "/" },
-  { label: "Watches", path: "/watches" },
-  { label: "Collections", path: "/collections" },
-  { label: "About Us", path: "/about" },
-  { label: "Contact", path: "/contact" },
+  { label: "OFFERS", path: "/" },
+  { label: "LUXURY", path: "/luxury" },
+  { label: "LATEST", path: "/latest" },
+  { label: "SMART WATCHES", path: "/smartwatches" },
+  { label: "SPORTS", path: "/sports" },
 ];
 
 

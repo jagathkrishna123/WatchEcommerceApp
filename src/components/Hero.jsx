@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Heroimg from "../assets/heroimg.png";
-import Bannerimg from "../assets/mainbanner.svg";
 import { assets, CUSTOMERSUPPORTDATA, SIDEBARLINKS } from "../constants/assets";
 import { X } from "lucide-react";
 import { NavLink } from "react-router-dom";
@@ -10,7 +8,7 @@ const Hero = () => {
   const [openSidebar, setOpenSidebar] = useState(false);
 
   return (
-    <div className="w-full bg-cover bg-center py-0 md:py-0 flex flex-col relative overflow-hidden md:gap-8 gap-1" style={{ backgroundImage: `url(${Heroimg})` }}>
+    <div className="w-full bg-cover bg-center py-0 md:py-0 flex flex-col relative overflow-hidden md:gap-8 gap-1" style={{ backgroundImage: `url(${assets.heroimg})` }}>
       <div className="absolute inset-0 bg-black/20 z-0"></div>
 
       {/* hamburger icon */}
@@ -28,7 +26,7 @@ const Hero = () => {
         {/* Sidebar Content */}
         <nav className="flex flex-col gap-6 px-6 mt-6 font-dmsans">
           {SIDEBARLINKS.map((link) => (
-            <NavLink key={link.path} to={link.path} className={({ isActive }) => `text-lg transition ${isActive ? "text-[#00D1B2]" : "text-white hover:text-[#00D1B2]"}`}>
+            <NavLink key={link.path} to={link.path} className={({ isActive }) => `text-md transition ${isActive ? "text-[#00D1B2]" : "text-white hover:text-[#00D1B2]"}`}>
               {link.label}
             </NavLink>
           ))}
@@ -46,27 +44,22 @@ const Hero = () => {
             Explor the next generation of watch shopping with our cutting-edge e-commerce platform, featuring extraordinary craftsmanship and one-of-a-kind styles.
           </motion.p>
 
-          <motion.p initial={{ y: -30, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }} className="md:hidden text-[14px] font-dmsans font-light max-w-md text-[#F1F1F1] mb-10">Discover the future of watch shopping with our innovative e-commerce platform, showcasing unique styles and exceptional craftsmanship.</motion.p>
+          <motion.p initial={{ y: -30, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }} className="md:hidden text-[14px] font-dmsans font-light max-w-md text-[#F1F1F1] mb-10">
+            Discover the future of watch shopping with our innovative e-commerce platform, showcasing unique styles and exceptional craftsmanship.
+          </motion.p>
         </div>
       </div>
 
       {/* ---------------- Hero section watch imageee ---------------- */}
-      <motion.div
-        initial={{ y: -30, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.9, delay: 0.9, ease: "easeOut" }}
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[42%] min-[400px]:-translate-y-[36%] sm:-translate-y-[34%] md:-translate-y-[38%] lg:-translate-y-[47%] z-20 w-[760px] min-[400px]:w-[800px] sm:w-[790px] md:w-[900px] lg:w-[1100px] xl:w-[1300px]">
-        <img src={Bannerimg} alt="watch" className="w-full h-auto drop-shadow-2xl" />
+      <motion.div initial={{ y: -30, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.9, delay: 0.9, ease: "easeOut" }} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[42%] min-[400px]:-translate-y-[36%] sm:-translate-y-[34%] md:-translate-y-[38%] lg:-translate-y-[47%] z-20 w-[760px] min-[400px]:w-[800px] sm:w-[790px] md:w-[900px] lg:w-[1100px] xl:w-[1300px]">
+        <img src={assets.mainbanner} alt="watch" className="w-full h-auto drop-shadow-2xl" />
       </motion.div>
 
       {/* bottom section.................................... */}
-<div className="backdrop-blur-xs md:backdrop-blur-md h-[200px] w-full flex items-center mt-20">
+      <div className="backdrop-blur-xs md:backdrop-blur-md h-[200px] w-full flex items-center mt-20">
         <div className="grid grid-cols-2 max-w-4xl mx-auto md:grid-cols-4 gap-x-6 gap-y-6 justify-items-center w-full px-3 md:px-0">
           {CUSTOMERSUPPORTDATA.map((item, index) => (
-            <motion.div
-              initial={{opacity: 0,scale: 0.85}} whileInView={{opacity: 1,scale: 1}} transition={{duration: 0.6,delay: index * 0.15,ease: "easeOut"}} viewport={{ once: true }}key={index}
-              className="flex flex-col items-center text-center p-2 md:p-4 rounded-xl" >
-
+            <motion.div initial={{ opacity: 0, scale: 0.85 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }} viewport={{ once: true }} key={index} className="flex flex-col items-center text-center p-2 md:p-4 rounded-xl">
               <div className="bg-[#005C53] w-[32px] h-[32px] md:w-16 md:h-16 flex items-center justify-center rounded-full mb-1 md:mb-2">
                 <img src={item.image} alt={item.title} className="w-[16px] md:w-[32px]" />
               </div>

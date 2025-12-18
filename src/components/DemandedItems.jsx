@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Title from "./Title";
 import { assets, DEMANDEDITEMS } from "../constants/assets";
 import likedicon from "../assets/likedicon.svg";
+import { motion } from "framer-motion";
 
 const DemandedItems = () => {
   const [liked, setLiked] = useState({});
@@ -20,7 +21,9 @@ const DemandedItems = () => {
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-10 mt-6">
         {DEMANDEDITEMS.map((item, index) => (
-          <div key={index} className=" relative flex flex-col items-center bg-white rounded-2xl border border-[#A3C4C1] p-4 md:p-3 shadow-xl hover:shadow-lg transition">
+          <motion.div initial={{ opacity: 0, scale: 0.92 }} whileInView={{ opacity: 1, scale: 1 }} transition={{type: "spring", stiffness: 120, damping: 20, mass: 0.8, delay: index * 0.15}} viewport={{ once: false }}
+
+           key={index} className=" relative flex flex-col items-center bg-white rounded-2xl border border-[#A3C4C1] p-4 md:p-3 shadow-xl hover:shadow-lg transition">
             <img src={liked[index] ? likedicon : assets.likeiconn} alt="like" className="w-[22px] absolute top-3 right-3 cursor-pointer z-10" onClick={() => handleLike(index)} />
             <div className="w-full h-[160px] md:h-[260px] flex items-center justify-center">
               <img src={item.image} alt="" className="w-full h-full object-contain transition-transform duration-500 ease-out hover:scale-105" />
@@ -30,7 +33,7 @@ const DemandedItems = () => {
             <p className="text-[#757C81] font-normal text-[11px] md:text-[13px] font-dmsans text-center">{item.brand}</p>
 
             <p className="text-[16px] md:text-[18px] font-bold text-[#003F38] font-dmsans mt-3">{item.price}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

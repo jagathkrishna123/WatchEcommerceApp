@@ -1,15 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../assets/logo.svg";
 import { Search, Phone, Mail } from "lucide-react";
-import { NAV_ACTIONS } from "../constants/assets";
+import { MENUITEMS, NAV_ACTIONS } from "../constants/assets";
 
 const Navbar = () => {
-  const menuItems = ["OFFERS", "LUXURY", "LATEST", "SMART WATCHES", "SPORTS", "CLASSIC"];
+  const [activeMenu, setActiveMenu] = useState(0);
 
   return (
     <>
       <header className="w-full">
-        {/* ----------- TOP BAR ----------- */}
         <div className="w-full bg-[#00423D] h-[75px] md:h-auto flex items-end text-white font-dmsans text-[14px]">
           <div className="max-w-[1440px] mx-auto flex justify-start md:justify-between items-center py-2 px-4 w-full">
             {/* Left................ */}
@@ -25,11 +24,9 @@ const Navbar = () => {
                 info@goldDiamonds.com
               </span>
             </div>
-
             {/* Right........... */}
-<span className="hidden md:block whitespace-nowrap">
-      IST (Mon - Sat) 10:00 AM to 6:00 PM
-    </span>          </div>
+            <span className="hidden md:block whitespace-nowrap">IST (Mon - Sat) 10:00 AM to 6:00 PM</span>
+          </div>
         </div>
 
         {/* ----------- MAIN NAVBAR ----------- */}
@@ -57,8 +54,12 @@ const Navbar = () => {
           <div className="hidden lg:block w-full">
             <div className="max-w-[1440px] mx-auto px-4">
               <ul className="flex items-center justify-center gap-8 tracking-wide uppercase py-1">
-                {menuItems.map((item, index) => (
-                  <li key={item} className={`cursor-pointer text-sm hover:opacity-80 transition font-dmsans pb-1 ${index === 0 ? "border-b-2 border-white" : ""}`}>
+                {MENUITEMS.map((item, index) => (
+                  <li
+                    key={item}
+                    onClick={() => setActiveMenu(index)}
+                    className={`text-sm font-dmsans pb-1 transition cursor-pointer
+        ${activeMenu === index ? "border-b-2 border-white font-semibold" : "border-b-2 border-transparent"}`}>
                     {item}
                   </li>
                 ))}
